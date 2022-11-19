@@ -1,0 +1,15 @@
+input {
+  display: none;
+}
+
+label {
+  cursor: pointer;
+}
+
+.csv-file-chooser-section {
+  text-align: center;
+}
+
+button:hover {
+  background-color: darkgoldenrod;
+}

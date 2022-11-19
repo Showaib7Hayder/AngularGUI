@@ -1,0 +1,28 @@
+<div class="ui grid">
+  <div class="four wide column">
+    <div class="ui vertical fluid tabular menu">
+      <!-- using alternate routerlink professional syntax in the first link -->
+      <a
+        class="item"
+        [routerLink]="['./']"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >Anova</a
+      >
+      <a class="item" routerLink="./spearman" routerLinkActive="active">
+        Spearman
+      </a>
+      <a class="item" routerLink="./shapiro" routerLinkActive="active">
+        Shapiro
+      </a>
+      <a class="item" routerLink="./median" routerLinkActive="active">
+        Median
+      </a>
+    </div>
+  </div>
+  <div class="twelve wide stretched column">
+    <div class="ui segment">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

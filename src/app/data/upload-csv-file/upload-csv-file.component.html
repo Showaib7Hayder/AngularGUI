@@ -1,0 +1,32 @@
+<app-divider> Upload CSV File </app-divider>
+
+<ng-container *ngIf="visible">
+  <app-placeholder></app-placeholder>
+</ng-container>
+
+<br />
+<br />
+
+<div class="csv-file-chooser-section">
+  <div class="ui big basic icon buttons">
+    <button class="ui button">
+      <label for="csvFileUpload">
+        <input
+          type="file"
+          #fileImportInput
+          name="File Upload"
+          id="csvFileUpload"
+          (change)="fileChangeListener($event)"
+          accept=".csv"
+        />
+        CSV<i class="upload icon"></i>
+      </label>
+    </button>
+  </div>
+
+  <br /><br />
+
+  <div>
+    <app-table [csvRecords]="csvRecords"></app-table>
+  </div>
+</div>
