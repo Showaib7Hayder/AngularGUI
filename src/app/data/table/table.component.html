@@ -2,11 +2,16 @@
 <div class="ui very basic collapsing celled table">
   <table>
     <tbody>
-      <tr *ngFor="let record of csvRecords; let i = index">
-        <td *ngFor="let rec of record">
-          {{ rec }}
-        </td>
-      </tr>
+      <div class="data">
+        <th *ngFor="let col of csvRecords[0]; let i = index">
+          {{ col }}
+        </th>
+        <tr *ngFor="let record of csvRecords; let i = index">
+          <td *ngFor="let rec of record">
+            {{ rec }}
+          </td>
+        </tr>
+      </div>
     </tbody>
   </table>
 </div>
